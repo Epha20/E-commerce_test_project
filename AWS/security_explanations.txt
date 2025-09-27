@@ -1,0 +1,27 @@
+####Security considerations
+
+* As my understanding IAM roles are truly secure way to grant permissions to AWS resources like EC2 instances. 
+
+####principle of Least privilege
+
+* principle of least privilege is the golden rule of cloud security. 
+
+When I build an IAM policy, I start with zero permissions and only add the specific actions the application absolutely needs to function. For instance, if an app only needs to read files from S3, I'll only grant it s3:GetObject. 
+Giving it a wildcard permission like s3:* is just asking for trouble if the application is ever compromised.
+
+####Securing S3 Files
+
+* To secure S3 files I usually follow a multi layered approach.
+
+Firstly Blocking public Access - The first thing I always do is ensure Block All public Access is enabled on the bucket. 
+
+Secondly I use policies for Granular Control - I use Bucket policies to lock down access from a network perspective and IAM policies to control which services or users can interact with the bucket.
+
+Finally, I always enable server-side encryption (SSE-S3). It's a simple checkbox that encrypts all data at rest.
+
+
+
+
+
+
+

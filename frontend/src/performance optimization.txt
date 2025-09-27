@@ -1,0 +1,9 @@
+####Performance Optimization
+
+When optimizing Core Web Vitals, I have a clear focus for each metric
+
+LCP (Loading) - My priority is always to optimize images and preload the most critical assets.
+
+FID (Interactivity) - I make sure to break up any long running JavaScript tasks so the browser's main thread is never blocked from responding to user input.
+
+CLS (Stability) -  I set explicit dimensions (width and height) on all images to prevent the layout from jumping around as the page loads.

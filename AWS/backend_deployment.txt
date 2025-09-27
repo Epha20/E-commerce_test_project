@@ -1,0 +1,8 @@
+####Deploying the API
+
+1. Dockerize the API by Dockerizing the packages of the application and its dependencies into a container image.
+
+2. Push the Docker image to Amazon ECR, which is a private Docker Hub.
+
+3. Create an ECS Task Definition that tells AWS how to run the container (which image to use, memory/CPU needs).
+Then, create an ECS Service to launch and maintain a desired number of copies of the task, connecting them to the Application Load Balancer.

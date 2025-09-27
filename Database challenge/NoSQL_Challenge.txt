@@ -1,0 +1,13 @@
+####NoSQL_Challenge
+
+I would select MongoDB for a real-time leaderboard, primarily for reasons of architectural simplicity and data richness.
+
+
+*My main reason is to maintain a unified data store. 
+
+*If an application's primary database is already MongoDB for storing player profiles and game state, I find it preferable to avoid adding and managing a separate system.
+
+*I also value the ability to store rich player data directly within the leaderboard document. I can include details like a player's avatar or country alongside their score. 
+This simplifies the process of fetching all the data needed to display the leaderboard, often reducing it to a single, efficient query.
+
+*These benefits in architectural simplicity and data integration can outweigh the raw performance advantages of a more specialized in-memory database in many common use cases.

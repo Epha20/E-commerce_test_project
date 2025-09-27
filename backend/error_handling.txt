@@ -1,0 +1,14 @@
+####error_handling
+
+To prevent SQL injection 
+*my rule is to exclusively use prepared statements.
+ This practice ensures that user input is always treated as data, never as executable code.
+
+*For XSS, my strategy is to escape all user generated content before it is rendered on a page. 
+ This neutralizes any malicious scripts by converting them into harmless plain text.
+
+*For CSRF, I implement anti-CSRF tokens. 
+ This involves embedding a unique, secret token in forms to verify that any state changing request originates from my own application, not an external site.
+
+*To stop brute-force attacks on login endpoints, I always apply strict rate limiting which I added on the backend API code.
+This involves temporarily blocking an IP address or user account after a small number of consecutive failed login attempts.

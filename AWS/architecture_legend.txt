@@ -1,0 +1,14 @@
+####Architecture Components
+
+1. Route 53 Directs users to the application.
+
+2. Application Load Balancer Receives all incoming traffic and distributes it across the EC2 instances in multiple Availability Zones. 
+If an instance in one AZ fails, the ALB automatically sends traffic to the healthy instances in the other AZ.
+
+3. Auto Scaling Group Automatically adds more EC2 instances when traffic is high and removes them when traffic is low.
+It also replaces any instances that fail.
+
+4. EC2 Instances are the virtual servers running  backend API, placed across at least two AZs for redundancy.
+
+5. RDS Multi-AZ Database This is a managed database with a primary instance in one AZ and a standby replica in another. 
+If the primary fails, AWS automatically promotes the standby to be the new primary.
